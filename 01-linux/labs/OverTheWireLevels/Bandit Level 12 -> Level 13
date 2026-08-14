@@ -1,0 +1,410 @@
+## Bandit Level 12  → Level 13
+
+**Challenge:** 
+
+
+**Solution:**
+bandit12@bandit:~$ man maketemp
+No manual entry for maketemp
+bandit12@bandit:~$ man mktemp
+bandit12@bandit:~$ mktemp -d "Ibrahimbandit12XXXX"
+mktemp: failed to create directory via template ‘Ibrahimbandit12XXXX’: Permission denied
+bandit12@bandit:~$ mktemp -d Ibrahimbandit12XXXX
+mktemp: failed to create directory via template ‘Ibrahimbandit12XXXX’: Permission denied
+bandit12@bandit:~$ cd /tmp
+bandit12@bandit:/tmp$ mktemp -d Ibrahimbandit12XXXX
+Ibrahimbandit12VcTl
+bandit12@bandit:/tmp$ cd Ibrahimbandit12VcTl
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ ls -la
+total 11040
+drwx------    2 bandit12 bandit12     4096 Jan  6 19:16 .
+drwxrwx-wt 1938 root     root     11288576 Jan  6 19:16 ..
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ cd ..
+bandit12@bandit:/tmp$ cd ..
+bandit12@bandit:/$ ls -a
+.   behemoth  bin.usr-is-merged  dev      etc         home     lib    lib64              libx32      manpage  media  narnia  proc  run   sbin.usr-is-merged  srv  tmp  utumno  vortex
+..  bin       boot               drifter  formulaone  krypton  lib32  lib.usr-is-merged  lost+found  maze     mnt    opt     root  sbin  snap                sys  usr  var
+bandit12@bandit:/$ ls
+behemoth  bin.usr-is-merged  dev      etc         home     lib    lib64              libx32      manpage  media  narnia  proc  run   sbin.usr-is-merged  srv  tmp  utumno  vortex
+bin       boot               drifter  formulaone  krypton  lib32  lib.usr-is-merged  lost+found  maze     mnt    opt     root  sbin  snap                sys  usr  var
+bandit12@bandit:/$ cd.
+Command 'cd.' not found, did you mean:
+  command 'cdw' from deb cdw (0.8.1-3)
+  command 'cd5' from deb cd5 (0.1-4)
+  command 'cdo' from deb cdo (2.3.0-1)
+  command 'cde' from deb cde (0.1+git9-g551e54d-1.2)
+  command 'cdi' from deb cdo (2.3.0-1)
+  command 'cdp' from deb irpas (0.10-9)
+  command 'cdb' from deb tinycdb (0.81-1)
+Try: apt install <deb name>
+bandit12@bandit:/$ cd ~
+bandit12@bandit:~$ ls
+data.txt
+bandit12@bandit:~$ man cp
+bandit12@bandit:~$ cd /tmp
+bandit12@bandit:/tmp$ cd Ibrahimbandit12VcTl
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ pwd
+/tmp/Ibrahimbandit12VcTl
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ cd ~
+bandit12@bandit:~$ man cp
+bandit12@bandit:~$ cp data.txt /tmp/Ibrahimbandit12VcTl
+bandit12@bandit:~$ cd Ibrahimbandit12VcTl
+-bash: cd: Ibrahimbandit12VcTl: No such file or directory
+bandit12@bandit:~$ cd tmp
+-bash: cd: tmp: No such file or directory
+bandit12@bandit:~$ cd /
+bandit12@bandit:/$ cd tmp
+bandit12@bandit:/tmp$ cd Ibrahimbandit12VcTl
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ ls
+data.txt
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ man xxd
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ file data.txt
+data.txt: ASCII text
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ man gzip
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ xxd -r data.txt
+�h�@щ��AFM�@ё�h���h��2�i���&�������#C�40�h����hh�hhh�L�M���0�� 2h��h4b4�hi��z�@�����4
+                                                                  �d��h`5A,���{�G��i0�P��d�@1/KȰ
+                                                                                                �l�ת3j폻{�?�DX�N����a.�'������-hf��'Tu�9
+                                                                                                                                        ��x(F����C��9z��#*ڛ�M�]J��2䔮�'�0�S<f�`��Fp�2+qt��R��
+&{qe �w��"�35OƎ����Z
+�hȔ'�7<bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ ls
+data.txt
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ file data.txt
+data.txt: ASCII text
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ man tar
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ man bzip
+No manual entry for bzip
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ man bzip2
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ xxd data.txt
+00000000: 3030 3030 3030 3030 3a20 3166 3862 2030  00000000: 1f8b 0
+00000010: 3830 3820 3238 3137 2065 6536 3820 3032  808 2817 ee68 02
+00000020: 3033 2036 3436 3120 3734 3631 2033 3232  03 6461 7461 322
+00000030: 6520 202e 2e2e 2e28 2e2e 682e 2e64 6174  e  ....(..h..dat
+00000040: 6132 2e0a 3030 3030 3030 3130 3a20 3632  a2..00000010: 62
+00000050: 3639 2036 6530 3020 3031 3363 2030 3263  69 6e00 013c 02c
+00000060: 3320 6664 3432 2035 6136 3820 3339 3331  3 fd42 5a68 3931
+00000070: 2034 3135 3920 2062 696e 2e2e 3c2e 2e2e   4159  bin..<...
+00000080: 425a 6839 3141 590a 3030 3030 3030 3230  BZh91AY.00000020
+00000090: 3a20 3236 3533 2035 3963 6320 3436 6235  : 2653 59cc 46b5
+000000a0: 2032 6430 3020 3030 3138 2066 6666 6620   2d00 0018 ffff 
+000000b0: 6461 3566 2065 3665 3320 2026 5359 2e46  da5f e6e3  &SY.F
+000000c0: 2e2d 2e2e 2e2e 2e2e 5f2e 2e0a 3030 3030  .-......_...0000
+000000d0: 3030 3330 3a20 3966 6364 2066 3539 6420  0030: 9fcd f59d 
+000000e0: 6263 3639 2064 6464 3720 6637 6666 2061  bc69 ddd7 f7ff a
+000000f0: 3765 3720 6462 6464 2062 3539 6620 202e  7e7 dbdd b59f  .
+00000100: 2e2e 2e2e 692e 2e2e 2e2e 2e2e 2e2e 2e0a  ....i...........
+00000110: 3030 3030 3030 3430 3a20 6666 6637 2063  00000040: fff7 c
+00000120: 6664 6420 6666 6266 2062 6264 6620 6666  fdd ffbf bbdf ff
+00000130: 6666 2066 6635 6520 6230 3031 2033 6235  ff ff5e b001 3b5
+00000140: 3820 202e 2e2e 2e2e 2e2e 2e2e 2e2e 5e2e  8  ...........^.
+00000150: 2e3b 580a 3030 3030 3030 3530 3a20 3234  .;X.00000050: 24
+00000160: 3036 2038 3030 3020 3030 6430 2036 3833  06 8000 00d0 683
+00000170: 3420 3632 3334 2064 3030 3020 3638 3639  4 6234 d000 6869
+00000180: 2039 3030 3020 2024 2e2e 2e2e 2e68 3462   9000  $.....h4b
+00000190: 342e 2e68 692e 2e0a 3030 3030 3030 3630  4..hi...00000060
+000001a0: 3a20 3161 3761 2038 3030 3320 3430 6430  : 1a7a 8003 40d0
+000001b0: 2030 3161 3120 6130 3036 2038 3138 3820   01a1 a006 8188 
+000001c0: 3334 3064 2031 6136 3820 202e 7a2e 2e40  340d 1a68  .z..@
+000001d0: 2e2e 2e2e 2e2e 2e34 2e2e 680a 3030 3030  .......4..h.0000
+000001e0: 3030 3730 3a20 6433 3430 2064 3138 3920  0070: d340 d189 
+000001f0: 6539 3036 2038 6634 3120 3033 3436 2034  e906 8f41 0346 4
+00000200: 6439 3420 3430 6431 2039 3161 3020 202e  d94 40d1 91a0  .
+00000210: 402e 2e2e 2e2e 412e 464d 2e40 2e2e 2e0a  @.....A.FM.@....
+00000220: 3030 3030 3030 3830 3a20 3638 3161 2030  00000080: 681a 0
+00000230: 3638 3120 6130 3638 2030 3638 3020 6334  681 a068 0680 c4
+00000240: 3030 2033 3230 3720 6132 3639 2061 3138  00 3207 a269 a18
+00000250: 3920 2068 2e2e 2e2e 682e 2e2e 2e32 2e2e  9  h....h....2..
+00000260: 692e 2e0a 3030 3030 3030 3930 3a20 6133  i...00000090: a3
+00000270: 3236 2038 3030 3020 6338 3030 2063 3831  26 8000 c800 c81
+00000280: 6120 3138 3833 2031 3030 3020 3030 6430  a 1883 1000 00d0
+00000290: 2063 3032 3320 202e 262e 2e2e 2e2e 2e2e   c023  .&.......
+000002a0: 2e2e 2e2e 2e2e 230a 3030 3030 3030 6130  ......#.000000a0
+000002b0: 3a20 3433 3131 2061 3033 3420 3330 6361  : 4311 a034 30ca
+000002c0: 2036 3830 3020 3036 3830 2030 3638 3120   6800 0680 0681 
+000002d0: 6136 3830 2036 3836 3820 2043 2e2e 3430  a680 6868  C..40
+000002e0: 2e68 2e2e 2e2e 2e2e 2e68 680a 3030 3030  .h.......hh.0000
+000002f0: 3030 6230 3a20 6430 3638 2036 3836 3820  00b0: d068 6868 
+00000300: 6330 3463 2064 3430 3020 3030 3033 2034  c04c d400 0003 4
+00000310: 6430 3620 3837 6138 2064 3030 3020 202e  d06 87a8 d000  .
+00000320: 6868 682e 4c2e 2e2e 2e4d 2e2e 2e2e 2e0a  hhh.L....M......
+00000330: 3030 3030 3030 6330 3a20 3330 3836 2038  000000c0: 3086 8
+00000340: 6332 3020 3332 3638 2030 3638 6420 3030  c20 3268 068d 00
+00000350: 3063 2039 6136 3420 3036 3938 2038 6430  0c 9a64 0698 8d0
+00000360: 3420 2030 2e2e 2032 682e 2e2e 2e2e 642e  4  0.. 2h.....d.
+00000370: 2e2e 2e0a 3030 3030 3030 6430 3a20 3036  ....000000d0: 06
+00000380: 3030 2036 3836 3020 3335 3431 2032 6338  00 6860 3541 2c8
+00000390: 3520 6338 6531 2037 6263 3920 3437 3965  5 c8e1 7bc9 479e
+000003a0: 2065 3336 3920 202e 2e68 6035 412c 2e2e   e369  ..h`5A,..
+000003b0: 2e7b 2e47 2e2e 690a 3030 3030 3030 6530  .{.G..i.000000e0
+000003c0: 3a20 3330 6131 2030 3235 3020 3832 6539  : 30a1 0250 82e9
+000003d0: 2036 3465 6620 3964 3430 2033 3132 6620   64ef 9d40 312f 
+000003e0: 3462 6338 2062 3030 6620 2030 2e2e 502e  4bc8 b00f  0..P.
+000003f0: 2e64 2e2e 4031 2f4b 2e2e 2e0a 3030 3030  .d..@1/K....0000
+00000400: 3030 6630 3a20 3063 3866 2030 3236 6320  00f0: 0c8f 026c 
+00000410: 6435 6361 2031 3030 3820 6437 6161 2033  d5ca 1008 d7aa 3
+00000420: 3336 6120 6564 3866 2062 6237 6220 202e  36a ed8f bb7b  .
+00000430: 2e2e 6c2e 2e2e 2e2e 2e33 6a2e 2e2e 7b0a  ..l......3j...{.
+00000440: 3030 3030 3031 3030 3a20 6234 3366 2064  00000100: b43f d
+00000450: 3534 3420 3136 3538 2038 3234 6520 6134  544 1658 824e a4
+00000460: 6166 2039 6365 3520 3631 3265 2038 6132  af 9ce5 612e 8a2
+00000470: 3720 202e 3f2e 442e 582e 4e2e 2e2e 2e61  7  .?.D.X.N....a
+00000480: 2e2e 270a 3030 3030 3031 3130 3a20 6333  ..'.00000110: c3
+00000490: 3033 2030 3531 3220 6362 6666 2064 6363  03 0512 cbff dcc
+000004a0: 6420 6634 3264 2036 3836 3620 6365 6563  d f42d 6866 ceec
+000004b0: 2038 3132 3720 202e 2e2e 2e2e 2e2e 2e2e   8127  .........
+000004c0: 2d68 662e 2e2e 270a 3030 3030 3031 3230  -hf...'.00000120
+000004d0: 3a20 3534 3735 2065 6433 3920 3130 3062  : 5475 ed39 100b
+000004e0: 2066 3839 3720 3738 3238 2034 3665 3220   f897 7828 46e2 
+000004f0: 6664 6633 2065 6661 3720 2054 752e 392e  fdf3 efa7  Tu.9.
+00000500: 2e2e 2e78 2846 2e2e 2e2e 2e0a 3030 3030  ...x(F......0000
+00000510: 3031 3330 3a20 3433 6230 2031 3730 3120  0130: 43b0 1701 
+00000520: 6131 3134 2033 3937 6120 3164 3831 2038  a114 397a 1d81 8
+00000530: 6431 6620 3166 3233 2032 6164 6120 2043  d1f 1f23 2ada  C
+00000540: 2e2e 2e2e 2e39 7a2e 2e2e 2e2e 232a 2e0a  .....9z.....#*..
+00000550: 3030 3030 3031 3430 3a20 3962 3138 2065  00000140: 9b18 e
+00000560: 6534 6420 6430 3564 2034 6165 3320 6430  e4d d05d 4ae3 d0
+00000570: 3332 2065 3439 3420 6165 3938 2032 3762  32 e494 ae98 27b
+00000580: 3020 202e 2e2e 4d2e 5d4a 2e2e 322e 2e2e  0  ...M.]J..2...
+00000590: 2e27 2e0a 3030 3030 3031 3530 3a20 3330  .'..00000150: 30
+000005a0: 6130 2035 3333 6320 3636 3936 2036 3061  a0 533c 6696 60a
+000005b0: 6420 6335 3436 2037 3063 3420 3332 3262  d c546 70c4 322b
+000005c0: 2037 3137 3420 2030 2e53 3c66 2e60 2e2e   7174  0.S<f.`..
+000005d0: 4670 2e32 2b71 740a 3030 3030 3031 3630  Fp.2+qt.00000160
+000005e0: 3a20 3862 6231 2035 3263 3620 6564 3061  : 8bb1 52c6 ed0a
+000005f0: 2032 3637 6220 3731 3635 2032 3038 6220   267b 7165 208b 
+00000600: 3737 6665 2031 3239 3420 202e 2e52 2e2e  77fe 1294  ..R..
+00000610: 2e26 7b71 6520 2e77 2e2e 2e0a 3030 3030  .&{qe .w....0000
+00000620: 3031 3730 3a20 3232 3830 2033 3331 3120  0170: 2280 3311 
+00000630: 3335 3466 2063 3638 6520 6530 3034 2039  354f c68e e004 9
+00000640: 3365 3320 6162 6634 2035 6130 6120 2022  3e3 abf4 5a0a  "
+00000650: 2e33 2e35 4f2e 2e2e 2e2e 2e2e 2e5a 2e0a  .3.5O........Z..
+00000660: 3030 3030 3031 3830 3a20 6135 3638 2063  00000180: a568 c
+00000670: 3839 3420 3237 6332 2039 3031 3520 3439  894 27c2 9015 49
+00000680: 6262 2030 3134 3720 6332 3533 2038 6537  bb 0147 c253 8e7
+00000690: 3320 202e 682e 2e27 2e2e 2e49 2e2e 472e  3  .h..'...I..G.
+000006a0: 532e 730a 3030 3030 3031 3930 3a20 3266  S.s.00000190: 2f
+000006b0: 6464 2039 3065 3120 3638 3731 2063 3639  dd 90e1 6871 c69
+000006c0: 3220 3164 3637 2035 6562 6320 6135 6639  2 1d67 5ebc a5f9
+000006d0: 2062 3861 3120 202f 2e2e 2e68 712e 2e2e   b8a1  /...hq...
+000006e0: 675e 2e2e 2e2e 2e0a 3030 3030 3031 6130  g^......000001a0
+000006f0: 3a20 3339 3133 2066 3037 3320 3139 3139  : 3913 f073 1919
+00000700: 2062 3632 3820 3961 6532 2063 3162 6620   b628 9ae2 c1bf 
+00000710: 3135 6565 2034 3933 6120 2039 2e2e 732e  15ee 493a  9..s.
+00000720: 2e2e 282e 2e2e 2e2e 2e49 3a0a 3030 3030  ..(......I:.0000
+00000730: 3031 6230 3a20 6533 3735 2034 6432 3320  01b0: e375 4d23 
+00000740: 3731 6530 2034 3933 3420 6337 6132 2031  71e0 4934 c7a2 1
+00000750: 3566 6620 3938 3563 2061 3062 6120 202e  5ff 985c a0ba  .
+00000760: 754d 2371 2e49 342e 2e2e 2e2e 5c2e 2e0a  uM#q.I4.....\...
+00000770: 3030 3030 3031 6330 3a20 3965 3635 2064  000001c0: 9e65 d
+00000780: 3631 3320 3331 3364 2037 6365 6620 3531  613 313d 7cef 51
+00000790: 3261 2033 3262 6620 3833 3565 2035 3064  2a 32bf 835e 50d
+000007a0: 3620 202e 652e 2e31 3d7c 2e51 2a32 2e2e  6  .e..1=|.Q*2..
+000007b0: 5e50 2e0a 3030 3030 3031 6430 3a20 6135  ^P..000001d0: a5
+000007c0: 3466 2035 3762 6120 6263 6562 2036 3934  4f 57ba bceb 694
+000007d0: 3420 3033 6338 2038 6135 3020 3335 3432  4 03c8 8a50 3542
+000007e0: 2039 3134 3020 202e 4f57 2e2e 2e69 442e   9140  .OW...iD.
+000007f0: 2e2e 5035 422e 400a 3030 3030 3031 6530  ..P5B.@.000001e0
+00000800: 3a20 6562 3531 2030 6634 6320 3861 3233  : eb51 0f4c 8a23
+00000810: 2039 3430 3120 3032 3436 2030 3435 3720   9401 0246 0457 
+00000820: 6431 6330 2063 3333 6520 202e 512e 4c2e  d1c0 c33e  .Q.L.
+00000830: 232e 2e2e 462e 572e 2e2e 3e0a 3030 3030  #...F.W...>.0000
+00000840: 3031 6630 3a20 6333 3238 2032 6465 3720  01f0: c328 2de7 
+00000850: 3364 3164 2036 3462 6520 3431 3930 2033  3d1d 64be 4190 3
+00000860: 3662 3020 6238 3033 2034 6638 3020 202e  6b0 b803 4f80  .
+00000870: 282d 2e3d 2e64 2e41 2e36 2e2e 2e4f 2e0a  (-.=.d.A.6...O..
+00000880: 3030 3030 3032 3030 3a20 3430 6263 2033  00000200: 40bc 3
+00000890: 3936 3020 6163 3565 2031 3361 3920 3361  960 ac5e 13a9 3a
+000008a0: 3737 2030 3136 3220 6436 3632 2037 3635  77 0162 d662 765
+000008b0: 3920 2040 2e39 602e 5e2e 2e3a 772e 622e  9  @.9`.^..:w.b.
+000008c0: 6276 590a 3030 3030 3032 3130 3a20 6664  bvY.00000210: fd
+000008d0: 6664 2039 3533 3520 3131 3838 2038 3538  fd 9535 1188 858
+000008e0: 3820 6538 6535 2061 3738 6420 3962 3234  8 e8e5 a78d 9b24
+000008f0: 2063 3036 3620 202e 2e2e 352e 2e2e 2e2e   c066  ...5.....
+00000900: 2e2e 2e2e 242e 660a 3030 3030 3032 3230  ....$.f.00000220
+00000910: 3a20 3931 6336 2034 3231 3220 6661 6336  : 91c6 4212 fac6
+00000920: 2034 6564 3820 6365 3438 2031 3631 6620   4ed8 ce48 161f 
+00000930: 6363 3434 2032 3135 6620 202e 2e42 2e2e  cc44 215f  ..B..
+00000940: 2e4e 2e2e 482e 2e2e 4421 5f0a 3030 3030  .N..H...D!_.0000
+00000950: 3032 3330 3a20 3333 3063 2035 6564 3720  0230: 330c 5ed7 
+00000960: 3237 3039 2065 3537 3820 3665 6664 2033  2709 e578 6efd 3
+00000970: 3737 3520 6337 3033 2038 6161 3120 2033  775 c703 8aa1  3
+00000980: 2e5e 2e27 2e2e 786e 2e37 752e 2e2e 2e0a  .^.'..xn.7u.....
+00000990: 3030 3030 3032 3430 3a20 3130 6236 2032  00000240: 10b6 2
+000009a0: 6335 6420 3136 6266 2066 3335 3220 6337  c5d 16bf f352 c7
+000009b0: 6666 2063 3564 6320 3931 3465 2031 3432  ff c5dc 914e 142
+000009c0: 3420 202e 2e2c 5d2e 2e2e 522e 2e2e 2e2e  4  ..,]...R.....
+000009d0: 4e2e 240a 3030 3030 3032 3530 3a20 3333  N.$.00000250: 33
+000009e0: 3131 2061 6434 6220 3430 6430 2031 3862  11 ad4b 40d0 18b
+000009f0: 3220 3337 3363 2030 3230 3020 3030 2020  2 373c 0200 00  
+00000a00: 2020 2020 2020 2033 2e2e 4b40 2e2e 2e37         3..K@...7
+00000a10: 3c2e 2e2e 0a                             <....
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ ls
+data.txt
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ file data.txt
+data.txt: ASCII text
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ man gzip
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ gzip -d data.txt
+gzip: data.txt: unknown suffix -- ignored
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ man gzip
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ gzip data.txt -d
+gzip: data.txt: unknown suffix -- ignored
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ file data.txt
+data.txt: ASCII text
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ man strings
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ man tr
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ man xxd
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ gzip data.txt
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ ls -a
+.  ..  data.txt.gz
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ xxd -r data.txt
+xxd: data.txt: No such file or directory
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ gzip data.txt
+gzip: data.txt: No such file or directory
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ gzip data.txt.gz
+gzip: data.txt.gz already has .gz suffix -- unchanged
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ ls
+data.txt.gz
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ gzip -r data.txt.gz
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ ls 
+data.txt.gz
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ man gzip
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ gzip -d data.txt.gz
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ ls -a
+.  ..  data.txt
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ xxd -r data.txt
+�h�@щ��AFM�@ё�h���h��2�i���&�������#C�40�h����hh�hhh�L�M���0�� 2h��h4b4�hi��z�@�����4
+                                                                  �d��h`5A,���{�G��i0�P��d�@1/KȰ
+                                                                                                �l�ת3j폻{�?�DX�N����a.�'������-hf��'Tu�9
+                                                                                                                                        ��x(F����C��9z��#*ڛ�M�]J��2䔮�'�0�S<f�`��Fp�2+qt��R��
+&{qe �w��"�35OƎ����Z
+�hȔ'�7<bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ ls -a
+.  ..  data.txt
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ file data.txt
+data.txt: ASCII text
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ ls -la
+total 11044
+drwx------    2 bandit12 bandit12     4096 Jan  6 19:28 .
+drwxrwx-wt 1947 root     root     11288576 Jan  6 19:28 ..
+-rw-r-----    1 bandit12 bandit12     2581 Jan  6 19:18 data.txt
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ xxd -r data.txt file.txt
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ ls a
+ls: cannot access 'a': No such file or directory
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ ls -la
+total 11048
+drwx------    2 bandit12 bandit12     4096 Jan  6 19:29 .
+drwxrwx-wt 1947 root     root     11288576 Jan  6 19:29 ..
+-rw-r-----    1 bandit12 bandit12     2581 Jan  6 19:18 data.txt
+-rw-rw-r--    1 bandit12 bandit12      605 Jan  6 19:29 file.txt
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ file file.txt
+file.txt: gzip compressed data, was "data2.bin", last modified: Tue Oct 14 09:26:00 2025, max compression, from Unix, original size modulo 2^32 572
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ gzip -d file.txt
+gzip: file.txt: unknown suffix -- ignored
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ mv file.txt file.gz
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ gzip -d file.gz
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ ls
+data.txt  file
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ file file
+file: bzip2 compressed data, block size = 900k
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ mv file file.bz2
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ ls
+data.txt  file.bz2
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ bzip2 -d file.bz2
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ ls 
+data.txt  file
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ file file
+file: gzip compressed data, was "data4.bin", last modified: Tue Oct 14 09:26:00 2025, max compression, from Unix, original size modulo 2^32 20480
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ mv file file.gz
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ ls
+data.txt  file.gz
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ gzip -d file.gz
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ ls
+data.txt  file
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ file file
+file: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ man tar
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ man tar
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ man tar
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ man tar
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ ls
+data.txt  file
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ tar -xf file
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ ls 
+data5.bin  data.txt  file
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ file data5.bin
+data5.bin: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ tar -xf data5.bin
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ ls
+data5.bin  data6.bin  data.txt  file
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ file data6.bin
+data6.bin: bzip2 compressed data, block size = 900k
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ mv data6.bin data6.bz2
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ bzip2 -d data6.bz2
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ ls
+data5.bin  data6  data.txt  file
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ file data6
+data6: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ tar -xf data6
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ ls
+data5.bin  data6  data8.bin  data.txt  file
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ file data8.bin
+data8.bin: gzip compressed data, was "data9.bin", last modified: Tue Oct 14 09:26:00 2025, max compression, from Unix, original size modulo 2^32 49
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ mv data8.bin data8.gz
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ gzip -d data8.gz
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ ls
+data5.bin  data6  data8  data.txt  file
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ cat data.txt
+00000000: 1f8b 0808 2817 ee68 0203 6461 7461 322e  ....(..h..data2.
+00000010: 6269 6e00 013c 02c3 fd42 5a68 3931 4159  bin..<...BZh91AY
+00000020: 2653 59cc 46b5 2d00 0018 ffff da5f e6e3  &SY.F.-......_..
+00000030: 9fcd f59d bc69 ddd7 f7ff a7e7 dbdd b59f  .....i..........
+00000040: fff7 cfdd ffbf bbdf ffff ff5e b001 3b58  ...........^..;X
+00000050: 2406 8000 00d0 6834 6234 d000 6869 9000  $.....h4b4..hi..
+00000060: 1a7a 8003 40d0 01a1 a006 8188 340d 1a68  .z..@.......4..h
+00000070: d340 d189 e906 8f41 0346 4d94 40d1 91a0  .@.....A.FM.@...
+00000080: 681a 0681 a068 0680 c400 3207 a269 a189  h....h....2..i..
+00000090: a326 8000 c800 c81a 1883 1000 00d0 c023  .&.............#
+000000a0: 4311 a034 30ca 6800 0680 0681 a680 6868  C..40.h.......hh
+000000b0: d068 6868 c04c d400 0003 4d06 87a8 d000  .hhh.L....M.....
+000000c0: 3086 8c20 3268 068d 000c 9a64 0698 8d04  0.. 2h.....d....
+000000d0: 0600 6860 3541 2c85 c8e1 7bc9 479e e369  ..h`5A,...{.G..i
+000000e0: 30a1 0250 82e9 64ef 9d40 312f 4bc8 b00f  0..P..d..@1/K...
+000000f0: 0c8f 026c d5ca 1008 d7aa 336a ed8f bb7b  ...l......3j...{
+00000100: b43f d544 1658 824e a4af 9ce5 612e 8a27  .?.D.X.N....a..'
+00000110: c303 0512 cbff dccd f42d 6866 ceec 8127  .........-hf...'
+00000120: 5475 ed39 100b f897 7828 46e2 fdf3 efa7  Tu.9....x(F.....
+00000130: 43b0 1701 a114 397a 1d81 8d1f 1f23 2ada  C.....9z.....#*.
+00000140: 9b18 ee4d d05d 4ae3 d032 e494 ae98 27b0  ...M.]J..2....'.
+00000150: 30a0 533c 6696 60ad c546 70c4 322b 7174  0.S<f.`..Fp.2+qt
+00000160: 8bb1 52c6 ed0a 267b 7165 208b 77fe 1294  ..R...&{qe .w...
+00000170: 2280 3311 354f c68e e004 93e3 abf4 5a0a  ".3.5O........Z.
+00000180: a568 c894 27c2 9015 49bb 0147 c253 8e73  .h..'...I..G.S.s
+00000190: 2fdd 90e1 6871 c692 1d67 5ebc a5f9 b8a1  /...hq...g^.....
+000001a0: 3913 f073 1919 b628 9ae2 c1bf 15ee 493a  9..s...(......I:
+000001b0: e375 4d23 71e0 4934 c7a2 15ff 985c a0ba  .uM#q.I4.....\..
+000001c0: 9e65 d613 313d 7cef 512a 32bf 835e 50d6  .e..1=|.Q*2..^P.
+000001d0: a54f 57ba bceb 6944 03c8 8a50 3542 9140  .OW...iD...P5B.@
+000001e0: eb51 0f4c 8a23 9401 0246 0457 d1c0 c33e  .Q.L.#...F.W...>
+000001f0: c328 2de7 3d1d 64be 4190 36b0 b803 4f80  .(-.=.d.A.6...O.
+00000200: 40bc 3960 ac5e 13a9 3a77 0162 d662 7659  @.9`.^..:w.b.bvY
+00000210: fdfd 9535 1188 8588 e8e5 a78d 9b24 c066  ...5.........$.f
+00000220: 91c6 4212 fac6 4ed8 ce48 161f cc44 215f  ..B...N..H...D!_
+00000230: 330c 5ed7 2709 e578 6efd 3775 c703 8aa1  3.^.'..xn.7u....
+00000240: 10b6 2c5d 16bf f352 c7ff c5dc 914e 1424  ..,]...R.....N.$
+00000250: 3311 ad4b 40d0 18b2 373c 0200 00         3..K@...7<...
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ file data8
+data8: ASCII text
+bandit12@bandit:/tmp/Ibrahimbandit12VcTl$ cat data8
+The password is FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
+
+
+**Explanation:**
+This took quite a while and was very confusing at first but seems ok now that I have completed it. I first created a temp directory and copied over the data file to the temp directory.I then reversed the hexdump using xxd and input that data into a new file called file and then began the decompression using gzip bzip2 and tar. I also had to keep using file to know rthe filetype and which of the 3 above decompression tools I had to use. I repeated the process until I reached a file that was type ascii text where I then used the cat command to get the password.
+
+
+**Password:** [password here]
+FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
+
+**What I learned:**
+I didn't know at first that you had to redirect the reversed hexdump into another file otherwise it just prints it to your terminal. 
+
+I also learnt that its very important to use the file command and to keep on top of that otherwise if you use the wrong command it will reverse your progress and could be confusing.

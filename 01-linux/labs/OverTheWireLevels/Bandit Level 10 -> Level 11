@@ -1,0 +1,17 @@
+## Bandit Level 10  → Level 11
+
+**Challenge:** 
+The password for the next level is stored in the file data.txt, which contains base64 encoded data
+
+**Solution:**
+bandit10@bandit:~$ base64 -d data.txt
+The password is dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+
+**Explanation:**
+Since the data is coded by base64 I use the base64 command with -d to decode the data giving me the answer.
+
+**Password:**
+dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+
+**What I learned:**
+For files coded in base64 you can use the base64 command to decode them and give the text to you in a readable format.

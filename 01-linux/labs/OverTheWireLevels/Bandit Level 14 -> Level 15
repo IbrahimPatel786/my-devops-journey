@@ -1,0 +1,28 @@
+## Bandit Level 14 → Level 15
+
+**Challenge:** 
+The password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost.
+
+**Solution:**
+bandit14@bandit:/etc/bandit_pass$ cat bandit14
+MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+bandit14@bandit:/etc/bandit_pass$ cd /
+bandit14@bandit:/$ cd ~
+bandit14@bandit:~$ telnet localhost 30000
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+Correct!
+8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+
+**Explanation:**
+I first had to go into the directory where the password for this level was located as that was needed to input to get the password for the next level.
+
+Once I had that I used the telnet command and connected to port 30000 on localhost and put the password in to get the password for the next level.
+
+**Password:**
+8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+
+**What I learned:**
+I learned how to connect to ports using port numbers and what ports are. Ports allow my computer to communicate over the network with other serrvices.

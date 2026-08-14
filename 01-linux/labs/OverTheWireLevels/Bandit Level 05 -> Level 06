@@ -1,0 +1,25 @@
+## Bandit Level 5 → Level 6
+
+**Challenge:** 
+The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties:
+
+human-readable
+1033 bytes in size
+not executable
+
+**Solution:**
+bandit5@bandit:~$ find -readable  -size 1033c ! -executable -exec cat {} \;
+HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+
+
+**Explanation:**
+Use the find command and add the properties you want it to search for.
+find -readable will filter human readable files
+- size 1033c files that are exaclt 1033 bytes in size
+! -executable using the ! in front will find file NOT executable.
+
+**Password:** [password here]
+HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+
+**What I learned:**
+find command is a powerful tool to quickly search through lots of different directories and find the exact file you want.

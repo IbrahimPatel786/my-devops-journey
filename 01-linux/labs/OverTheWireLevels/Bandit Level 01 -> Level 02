@@ -1,0 +1,16 @@
+## Bandit Level 1 → Level 2
+
+**Challenge:**
+The password for the next level is stored in a file called - located in the home directory
+
+**Solution:**
+cat ./-
+
+**Explanation:**
+To create or read a file that starts with - you would have to prefix the path of the file using ./
+
+**Password:**
+263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+
+**What I learned:**
+the (.) in ./ means in the current directory and the / is the seperator in Linux so together ./ is a way to specify a path to a file.

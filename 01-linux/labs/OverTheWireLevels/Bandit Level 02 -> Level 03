@@ -1,0 +1,16 @@
+## Bandit Level 2 → Level 3
+
+**Challenge:**
+The password for the next level is stored in a file called --spaces in this filename-- located in the home directory
+
+**Solution:**
+cat ./"--spaces in this filename--"
+
+**Explanation:**
+Again like the previous level since the file has a - in it we cannot run it without ./ and since it has spaces in the name we have to encapsulate it with ""
+
+**Password:**
+MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+
+**What I learned:**
+Use "" to encapsulate files that have spaces otherwise the terminal will try to run each word as a file.

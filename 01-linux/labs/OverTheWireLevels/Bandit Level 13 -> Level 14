@@ -1,0 +1,20 @@
+## Bandit Level 13 → Level 14
+
+**Challenge:** 
+The password for the next level is stored in /etc/bandit_pass/bandit14 and can only be read by user bandit14. For this level, you don’t get the next password, but you get a private SSH key that can be used to log into the next level. Look at the commands that logged you into previous bandit levels, and find out how to use the key for this level.
+
+**Solution:**
+ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
+
+
+**Explanation:**
+First I had to copy the sshkey to my computer and then exit the bandit secure shell as it was giving me an error code whenever I tried to ssh from their remote machine.
+
+Then I used the ssh command following up with -i and the private key to login to the bandit14 ssh.
+
+**Password:**
+N/A
+
+**What I learned:**
+SSH privatekeys can be used to access remote machines rather than passwords this is a lot safer and secure.
+

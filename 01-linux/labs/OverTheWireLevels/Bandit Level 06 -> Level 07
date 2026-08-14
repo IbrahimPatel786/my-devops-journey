@@ -1,0 +1,26 @@
+## Bandit Level 6  → Level 7
+
+**Challenge:** 
+The password for the next level is stored somewhere on the server and has all of the following properties:
+
+owned by user bandit7
+owned by group bandit6
+33 bytes in size
+
+**Solution:**
+bandit6@bandit:/$ find -type f -user bandit7 -group bandit6 -size 33c -exec cat {} \; 2>/dev/null
+morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+
+
+**Explanation:**
+Using the find command I can again filter results for the result that I want using the find command and inputting the properties.
+-user for the user that it is owned by
+-group for the group it is owned by
+-size for what sized file I am looking for 
+since I do not have access to a lot of files i also used the stderror command 2>/dev/null to filter out all the permission denied results and to cleanly give me the password.
+
+**Password:** [password here]
+morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+
+**What I learned:**
+using the stderr redirects the errors and discards them to give me my result.

@@ -1,0 +1,31 @@
+## Bandit Level 3 → Level 4
+
+**Challenge:**
+The password for the next level is stored in a hidden file in the inhere directory.
+
+**Solution:**
+bandit3@bandit:~$ pwd
+/home/bandit3
+bandit3@bandit:~$ ls -a
+.  ..  .bash_logout  .bashrc  inhere  .profile
+bandit3@bandit:~$ cd inhere
+bandit3@bandit:~/inhere$ ls -la
+total 12
+drwxr-xr-x 2 root    root    4096 Oct 14 09:26 .
+drwxr-xr-x 3 root    root    4096 Oct 14 09:26 ..
+-rw-r----- 1 bandit4 bandit3   33 Oct 14 09:26 ...Hiding-From-You
+bandit3@bandit:~/inhere$ cat ...Hiding-From-You
+2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+
+
+**Explanation:**
+First use command pwd to find out what directory you are currently in then use ls command to see what other directories i can change to.
+Then use cd to change directory to inhere.
+Use ls -a or ls -la to find hidden files.
+Use cat command to read file contents and get the password
+
+**Password:**
+2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+
+**What I learned:**
+Use ls -a to find hidden files and use cd to change working directory.

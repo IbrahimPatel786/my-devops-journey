@@ -1,0 +1,20 @@
+## Bandit Level 15 → Level 16
+
+**Challenge:** 
+The password for the next level can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL/TLS encryption.
+
+**Solution:**
+bandit15@bandit:~$ ncat --ssl localhost 30001
+8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+Correct!
+kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
+
+
+**Explanation:**
+Used the ncat command with --ssl to connect to port 30001 on localhost with SSL encryption.
+
+**Password:**
+kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
+
+**What I learned:**
+Using TSL/SSL you can share information while encrypting it so that it is secure and safe as it gets shared across the internet.

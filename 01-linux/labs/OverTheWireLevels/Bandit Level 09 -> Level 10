@@ -1,0 +1,65 @@
+## Bandit Level 9  → Level 10 
+
+**Challenge:** 
+The password for the next level is stored in the file data.txt in one of the few human-readable strings, preceded by several ‘=’ characters.
+
+**Solution:**
+bandit9@bandit:~$ strings data.txt | grep "="
+FB`=
+c\5D=
+========== the
+?/=l
+=Uc1
+=vG*2P
+========== password
+k=ezG
+E========== is
+=%r_
+.?=Dm
+O&A=n
+5========== FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+=*^Y
+=L3jT
+q<=,
+'QHE=
++=NBf
+
+**Explanation:**
+First I used the file command on data.txt to find out what type of file it was and since it was data I then used the strings command to get the human readable text and then pipe it into the grep command to search for lines with = thus giving me the password.
+
+
+**Password:**
+FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+
+**What I learned:**
+strings is good to give you the human readable text in a file and can also be used in conjunction with a lot of other commands like grep in this instance to give me the desired output.
+
+
+
+
+
+
+
+
+
+
+bandit9@bandit:~$ strings data.txt | grep "="
+FB`=
+c\5D=
+========== the
+?/=l
+=Uc1
+=vG*2P
+========== password
+k=ezG
+E========== is
+=%r_
+.?=Dm
+O&A=n
+5========== FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+=*^Y
+=L3jT
+q<=,
+'QHE=
++=NBf
+

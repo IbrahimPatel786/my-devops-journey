@@ -1,0 +1,17 @@
+## Bandit Level 8  → Level 9 
+
+**Challenge:** 
+The password for the next level is stored in the file data.txt and is the only line of text that occurs only once
+
+**Solution:**
+bandit8@bandit:~$ sort data.txt | uniq -u
+4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+
+**Explanation:**
+Using the sort command sort all lines into order and then use uniq -u to remove all repeated lines and print the only unique line left.
+
+**Password:** [password here]
+4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+
+**What I learned:**
+Sort and Uniq are very good tools to sort a file in any way that you want and to also find a unique piece of data.

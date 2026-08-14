@@ -1,0 +1,16 @@
+## Bandit Level 11  → Level 12
+
+**Challenge:** 
+The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
+
+**Solution:**
+The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
+
+**Explanation:**
+Using the tr command I used it to encrypt the data using the command provided by them 
+
+**Password:**
+7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+
+**What I learned:**
+tr command can be used to replace letters from the input.
